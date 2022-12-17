@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+    <parameter name="browser" value="chrome"/>
+    <listeners>
+        <listener class-name="listeners.ExtentListener"/>
+    </listeners>
+
+    <test name="Addition Test">
+        <parameter name="expectedExercise" value="2+3"/>
+        <parameter name="expectedResult" value="5"/>
+        <classes>
+            <class name="tests.MainRunnerTest">
+                <methods>
+                    <include name="additionTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Subtraction Test">
+        <parameter name="expectedExercise" value="10-2"/>
+        <parameter name="expectedResult" value="8"/>
+        <classes>
+            <class name="tests.MainRunnerTest">
+                <methods>
+                    <include name="subtractionTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Multiplication Test">
+        <parameter name="expectedExercise" value="(10-2)*2"/>
+        <parameter name="expectedResult" value="20"/>
+        <classes>
+            <class name="tests.MainRunnerTest">
+                <methods>
+                    <include name="multiplicationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Sinus Test">
+        <parameter name="expectedExercise" value="sin(30)"/>
+        <parameter name="expectedResult" value="0.5"/>
+        <classes>
+            <class name="tests.MainRunnerTest">
+                <methods>
+                    <include name="sinusTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite> 
