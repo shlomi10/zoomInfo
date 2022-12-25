@@ -33,6 +33,7 @@ public class MainRunnerTest extends BaseTest {
         } catch (Exception e) {
             System.out.println("There was problem load the properties file");
         }
+        mainAppPage.buildMap();
     }
 
     @Parameters({"expectedExercise", "expectedResult",})
