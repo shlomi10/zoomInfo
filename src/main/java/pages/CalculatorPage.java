@@ -45,7 +45,7 @@ public class CalculatorPage extends BasePageFunctions {
     }
 
     // build the calculator buttons
-    public void buildMap(){
+    public void buildMap() {
         btns.put("0", By.id("Btn0"));
         btns.put("1", By.id("Btn1"));
         btns.put("2", By.id("Btn2"));
@@ -81,12 +81,13 @@ public class CalculatorPage extends BasePageFunctions {
         btns.put("ncr", By.id("BtnNcR"));
         btns.put("npr", By.id("BtnNpR"));
     }
+
     // parse characters in exercise to click on char
     public void parseAndClick(String exercise) {
         Character[] chars = exercise.chars().mapToObj(c -> (char) c).toArray(Character[]::new);
         for (int i = 0; i < chars.length; i++) {
             Character c = chars[i];
-            if(Character.isLetter(c)){
+            if (Character.isLetter(c)) {
                 StringBuilder action = new StringBuilder();
                 while (Character.isLetter(chars[i])) {
                     action.append(chars[i]);
